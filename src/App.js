@@ -63,6 +63,7 @@ class App extends Component {
   }
 
   _getMovies = async()=>{
+
     const movies = await this._callApi();
     
     this.setState({
@@ -85,8 +86,10 @@ class App extends Component {
               synopsis={movie.synopsis} 
               key={movie.id} />
     });
+    
     return movies;
   }
+
   render() {
     
     const {movies} = this.state;
